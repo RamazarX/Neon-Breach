@@ -120,7 +120,7 @@ public class ObstacleSpawner : MonoBehaviour
         GameObject newObj = Instantiate(prefab, spawnPos, Quaternion.identity);
 
         Vector3 centerPos = new Vector3(0, 0, zPosition);
-        newObj.transform.up = (spawnPos - centerPos).normalized;
+        newObj.transform.up = (centerPos - spawnPos).normalized;
         if (rotSpeed != 0f)
         {
             Rotator rotator = newObj.AddComponent<Rotator>();
